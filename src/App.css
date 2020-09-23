@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+p {
+  font-size: large;
+  margin-left: 5%;
+  margin-right: 7%;
+  list-style: none;
+}
+
+button {
+  color: white;
+  border: 2px solid #62DAFB;
+  background-color:black ;
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px;
+  font-size: large;
+}
+
+img {
+  max-width: 10%;
+}
+
+.App-logo {
+  max-width: 50%;
+}
+
+h2 {
+  font-size:50px;
+  font-weight: bold;
+}
