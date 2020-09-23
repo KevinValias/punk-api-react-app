@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import BeerList from './BeerList';
 class FetchComponent extends Component {
-    
     state = {
         beers: []
     }
 
     FetchComponent = () => {
-        
              fetch('https://api.punkapi.com/v2/beers')
              .then(response => response.json())
              .then((data) => {
@@ -15,9 +13,7 @@ class FetchComponent extends Component {
                  this.setState({beers:data})
                 })
             }
-                
-                 
-             
+
     render() {
         return(
            <div>
@@ -29,20 +25,22 @@ class FetchComponent extends Component {
      }
 }
 
-         
-                     
-          
-         
-                      
-                 
-                 
-         
-         
+export default FetchComponent;
+
+// axios:
+
+// FetchComponent = () => {
+//     return axios.get('https://api.punkapi.com/v2/beers')
+//          .then(res => {
+//              const beers2 = res.data
+//              this.setState({ beers: beers2 });
+//             })
+//         }
 
 
 
+// Functional Components
 // const FetchComponent = () => {
-    
 //          fetch('https://api.punkapi.com/v2/beers')
 //              .then(response => response.json())
 //              .then((data) => {
@@ -50,17 +48,11 @@ class FetchComponent extends Component {
 //                  this.setState({beers: data})
 //                 })
 
-
 // return (
 //     <div>
 //                  <button onClick={this.FetchComponent}>List beers</button>
 
 //     </div>
 // )
-                 
 // }
-
-export default FetchComponent;
-
-// how to fetch using some CLASSIES //
 
