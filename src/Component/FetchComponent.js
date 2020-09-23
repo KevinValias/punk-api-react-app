@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import BeerList from './BeerList';
+import axios from 'axios'
 class FetchComponent extends Component {
     state = {
         beers: []
     }
-
     FetchComponent = () => {
-             fetch('https://api.punkapi.com/v2/beers')
-             .then(response => response.json())
-             .then((data) => {
-                 console.log(data);
-                 this.setState({beers:data})
+        return axios.get('https://api.punkapi.com/v2/beers')
+            .then(res => {
+                const beers2 = res.data
+                this.setState({ beers: beers2 });
                 })
             }
 
@@ -26,18 +25,6 @@ class FetchComponent extends Component {
 }
 
 export default FetchComponent;
-
-// axios:
-
-// FetchComponent = () => {
-//     return axios.get('https://api.punkapi.com/v2/beers')
-//          .then(res => {
-//              const beers2 = res.data
-//              this.setState({ beers: beers2 });
-//             })
-//         }
-
-
 
 // Functional Components
 // const FetchComponent = () => {
